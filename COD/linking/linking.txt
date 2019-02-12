@@ -1,0 +1,12 @@
+create files add.c,add.h
+compile using 
+gcc -c add.c //creates add.o
+
+gcc -I . -c 1.c //creates 1.o
+
+gcc -shared -o some.so add.o //combine shared libraries
+
+gcc -o add 1.o some.so
+
+last run
+LD_LIBRARY_PATH=. ./dynamic
